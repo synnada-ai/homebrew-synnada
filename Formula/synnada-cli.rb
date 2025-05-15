@@ -6,8 +6,6 @@ class SynnadaCli < Formula
   sha256 "3f94eee2426c121c2ef2976e4eaf5b9ee3fce90064ae9a385fcd58808ecd69dd"
   license "MIT"
 
-  # depends_on "rust" => :build
-
   def install
     # Install the prebuilt CLI binary
     bin.install "cli" => "synnada"
