@@ -1,3 +1,4 @@
+# Formula/synnada-cli.rb
 class SynnadaCli < Formula
   desc "Synnada CLI tool"
   homepage "https://github.com/synnada-ai/cli"
@@ -5,13 +6,11 @@ class SynnadaCli < Formula
   sha256 "3f94eee2426c121c2ef2976e4eaf5b9ee3fce90064ae9a385fcd58808ecd69dd"
   license "MIT"
 
-  depends_on "rust" => :build
+  # depends_on "rust" => :build
 
   def install
-    # Build from source
-    system "cargo", "build", "--release"
-    # The crate’s binary is named `cli`; install it as `synnada`
-    bin.install "target/release/cli" => "synnada"
+    # Install the prebuilt CLI binary
+    bin.install "cli" => "synnada"
   end
 
   test do
