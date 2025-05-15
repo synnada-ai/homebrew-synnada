@@ -1,8 +1,8 @@
 class SynnadaCli < Formula
   desc "Synnada CLI tool"
   homepage "https://github.com/synnada-ai/cli"
-  url "https://synnada-ai.github.io/homebrew-synnada/releases/cli/cli-v0.0.23.tar.gz"
-  sha256 "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+  url "https://synnada-ai.github.io/homebrew-synnada/releases/cli/cli-v0.0.24.tar.gz"
+  sha256 "3f94eee2426c121c2ef2976e4eaf5b9ee3fce90064ae9a385fcd58808ecd69dd"
   license "MIT"
 
   depends_on "rust" => :build
