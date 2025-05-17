@@ -1,4 +1,3 @@
-# Formula/synnada-cli.rb
 class SynnadaCli < Formula
   desc "Synnada CLI tool"
   homepage "https://github.com/synnada-ai/cli"
