@@ -1,8 +1,8 @@
 class SynnadaDaemon < Formula
     desc "Synnada daemon"
     homepage "https://github.com/synnada-ai/daemon"
-  url "https://synnada-ai.github.io/homebrew-synnada/releases/daemon/synnadad-v0.1.9.zip"
-  sha256 "cad1341e776c3ff5c20909579ee636522a7fda932c655df4fe670082df42387c"
+  url "https://synnada-ai.github.io/homebrew-synnada/releases/daemon/synnadad-v0.1.10.zip"
+  sha256 "b165fa171ab07ac3a17c68fd7e14d9887e8a0f7c5739c7b5158cebd7f1ecf84b"
     license "MIT"
   
     # Runtime dependencies:
