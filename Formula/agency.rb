@@ -14,8 +14,8 @@ class Agency < Formula
     cp cached_download, wheel
 
     virtualenv_create(libexec, Formula["python@3.14"].opt_bin/"python3.14")
-    system libexec/"bin/python", "-m", "ensurepip"
-    system libexec/"bin/pip", "install", wheel
+    system Formula["python@3.14"].opt_bin/"python3.14", "-m", "pip",
+           "--python=#{libexec}/bin/python", "install", wheel
     bin.install_symlink libexec/"bin/agency"
   end
 
