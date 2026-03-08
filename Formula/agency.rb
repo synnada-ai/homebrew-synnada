@@ -1,7 +1,7 @@
 class Agency < Formula
   desc "Agency CLI runtime host bootstrap"
   homepage "https://github.com/synnada-ai/agency-cli-dist"
-  url "https://github.com/synnada-ai/agency-cli-dist/releases/download/v0.1.0-rc5/install.sh"
+  url "https://github.com/synnada-ai/agency-cli-dist/releases/download/v0.1.0-rc6/install.sh"
   sha256 "427913424b67738f3371048535c24fb8a2fa92e05de75358f9fc42cebe7f16ae"
   license "Proprietary"
 
@@ -29,7 +29,7 @@ class Agency < Formula
         exec "$user_agency" "$@"
       fi
 
-      export AGENCY_VERSION="${AGENCY_VERSION:-v0.1.0-rc5}"
+      export AGENCY_VERSION="${AGENCY_VERSION:-v0.1.0-rc6}"
       curl -fsSL "https://github.com/synnada-ai/agency-cli-dist/releases/download/${AGENCY_VERSION}/install.sh" | \
         AGENCY_VERSION="$AGENCY_VERSION" PYTHON_BIN="$PYTHON_BIN" bash
 
