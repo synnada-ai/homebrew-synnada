@@ -12,7 +12,12 @@ class Agency < Formula
       #!/usr/bin/env bash
       set -euo pipefail
 
-      PYTHON_BIN="${PYTHON_BIN:-python3}"
+      brew_python="#{Formula["python@3.14"].opt_bin}/python3.14"
+      if [ -x "$brew_python" ]; then
+        PYTHON_BIN="${PYTHON_BIN:-$brew_python}"
+      else
+        PYTHON_BIN="${PYTHON_BIN:-python3}"
+      fi
       user_agency="$("$PYTHON_BIN" - <<'PY'
       import site
       from pathlib import Path
