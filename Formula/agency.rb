@@ -16,6 +16,8 @@ class Agency < Formula
     virtualenv_create(libexec, Formula["python@3.14"].opt_bin/"python3.14")
     system Formula["python@3.14"].opt_bin/"python3.14", "-m", "pip",
            "--python=#{libexec}/bin/python", "install", wheel
+    system Formula["python@3.14"].opt_bin/"python3.14", "-m", "pip",
+           "--python=#{libexec}/bin/python", "uninstall", "--yes", "cryptography"
     bin.install_symlink libexec/"bin/agency"
   end
 
