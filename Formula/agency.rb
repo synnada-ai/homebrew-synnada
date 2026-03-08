@@ -1,4 +1,6 @@
 class Agency < Formula
+  include Language::Python::Virtualenv
+
   desc "Agency CLI runtime host"
   homepage "https://github.com/synnada-ai/agency-cli-dist"
   url "https://github.com/synnada-ai/agency-cli-dist/releases/download/v0.1.0-rc2/agency_cli-0.1.0-py3-none-any.whl"
@@ -11,8 +13,9 @@ class Agency < Formula
     wheel = buildpath/"agency_cli-0.1.0-py3-none-any.whl"
     cp cached_download, wheel
 
-    system Formula["python@3.14"].opt_bin/"python3.14", "-m", "pip", "install",
-           "--prefix=#{prefix}", "--break-system-packages", wheel
+    venv = virtualenv_create(libexec, Formula["python@3.14"].opt_bin/"python3.14")
+    system venv.root/"bin/pip", "install", wheel
+    bin.install_symlink libexec/"bin/agency"
   end
 
   test do
