@@ -1,4 +1,4 @@
-cask "synnada-desktop-electron" do
+cask "synnada-ui" do
     version "0.0.0"
     sha256 "<AUTO-BUMPED_SHA256>"
   
