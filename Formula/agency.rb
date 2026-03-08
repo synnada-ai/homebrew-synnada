@@ -13,8 +13,9 @@ class Agency < Formula
     wheel = buildpath/"agency_cli-0.1.0-py3-none-any.whl"
     cp cached_download, wheel
 
-    venv = virtualenv_create(libexec, Formula["python@3.14"].opt_bin/"python3.14")
-    system venv.root/"bin/pip", "install", wheel
+    virtualenv_create(libexec, Formula["python@3.14"].opt_bin/"python3.14")
+    system libexec/"bin/python", "-m", "ensurepip"
+    system libexec/"bin/pip", "install", wheel
     bin.install_symlink libexec/"bin/agency"
   end
 
