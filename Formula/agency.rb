@@ -16,7 +16,7 @@ class Agency < Formula
       user_agency="$("$PYTHON_BIN" - <<'PY'
       import site
       from pathlib import Path
-      print(Path(site.getusersitepackages()).parent / "bin" / "agency")
+      print(Path(site.getuserbase()) / "bin" / "agency")
       PY
       )"
 
